@@ -1,0 +1,21 @@
+        {
+            "perl" : "6.c",
+            "name" : "method-menu",
+            "auth" : "github:doomvox",
+            "api" : "1",
+            "version" : "0.0.1",
+            "description" : "Add 'm' method everywhere for listing menu of available methods",
+            "authors" : [ "Joseph Brenner" ],
+            "license" : "Artistic-2.0",
+            "provides" : {
+                "method-menu" : "lib/method-menu.pm6"
+            },
+            "depends" : [ 'Object::Examine', 'Augment::Util' ],
+            "build-depends" : [ ],
+            "test-depends" : [ 'Test' ],
+            "resources" : [ ],
+            "tags": [
+                "method-menu", "m"
+            ],
+            "source-url" : "git://github.com/doomvox/Object-Examine.git"
+        }
