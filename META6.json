@@ -3,8 +3,8 @@
             "name" : "method-menu",
             "auth" : "github:doomvox",
             "api" : "1",
-            "version" : "0.0.1",
-            "description" : "Add 'm' method everywhere for listing menu of available methods",
+            "version" : "0.0.3",
+            "description" : "Add 'm' method everywhere to list a menu of available methods",
             "authors" : [ "Joseph Brenner" ],
             "license" : "Artistic-2.0",
             "provides" : {

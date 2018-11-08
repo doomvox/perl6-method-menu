@@ -3,14 +3,18 @@ use v6;
 use Test;
 use method-menu;
 
+# use Object::Examine;
+# use Symbol::Scan;
+# use Augment::Util;
+
 # plan 2;
 
 my $test_case = "'use method-menu;' and the 'm' method on Array";
 subtest {
-  my $report1 = (Array).m;
-
+  my $noninteractive = True;
+  my $report1 = (Array).m( $noninteractive );
   my @creatures = <alphan betazoid gammera>;
-  my $report2 = @creatures.m;
+  my $report2 = @creatures.m( $noninteractive );
 
   my $a_few_dozen = 24;
 
@@ -21,9 +25,6 @@ subtest {
   my @report2 = $report2.lines;
   my $l2 = @report2.elems;  # 203
   cmp-ok($l2, '>', $a_few_dozen, "report2 shows over $a_few_dozen methods: $l2");
-
-
-
 
 }, $test_case;
 done-testing();

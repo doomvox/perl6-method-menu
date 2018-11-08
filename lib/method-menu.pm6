@@ -1,11 +1,17 @@
-use Object::Examine;
-use Augment::Util;
+
+use Object::Examine; # Introspector role
+use Augment::Util;   # Augur class
 use MONKEY-TYPING;
 augment class Any does Introspector {
-    method m {
+    method m ( $non-interactive-ok? ) {  # Optional flag to disable repl check
+         unless $non-interactive-ok {
+             if not Augur.in_repl {
+                 die "The 'm' method is only intended to be run inside the perl6 repl.";
+             }
+         }
         return self.menu;
     }
-    Recomposer.recompose_core();
+    Augur.recompose_core();
 }
 
 =begin pod
@@ -76,8 +82,9 @@ might resort to manual installation.  The code is available on github:
 
    https://github.com/doomvox/perl6-object-examine
    https://github.com/doomvox/perl6-symbol-scan
-   https://github.com/doomvox/perl6-augment-util
+   https://github.com/doomvox/perl6-augment-utilx
    https://github.com/doomvox/perl6-method-menu
+
 
 =end pod
 
