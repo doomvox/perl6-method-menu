@@ -10,9 +10,9 @@
             "provides" : {
                 "method-menu" : "lib/method-menu.pm6"
             },
-            "depends" : [ 'Object::Examine', 'Augment::Util' ],
+            "depends" : [ "Object::Examine", "Augment::Util" ],
             "build-depends" : [ ],
-            "test-depends" : [ 'Test' ],
+            "test-depends" : [ "Test" ],
             "resources" : [ ],
             "tags": [
                 "method-menu", "m"
